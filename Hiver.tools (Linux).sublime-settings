@@ -1,0 +1,5 @@
+{
+	"hosts_path": "/etc/hosts",
+    "nginx_conf_path": "/usr/local/nginx/conf/nginx.conf",
+    "nginx_path": "sudo /usr/local/nginx/sbin/nginx"
+}

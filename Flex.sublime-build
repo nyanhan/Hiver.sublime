@@ -1,0 +1,9 @@
+{
+    "cmd": [
+        "/Users/hiver/Documents/flex_sdk_4.6/bin/mxmlc",
+        //"-o", "${project_base_name}.swf",
+        "${file}", "-o", "../swfupload.swf"
+    ],
+    "selector": "source.actionscript",
+    "encoding": "cp936"
+}
