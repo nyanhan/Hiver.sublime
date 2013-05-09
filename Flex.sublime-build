@@ -1,8 +1,9 @@
 {
     "cmd": [
-        "/Users/hiver/Documents/flex_sdk_4.6/bin/mxmlc",
+        "/Users/hiver/Documents/flex_sdk_4.0/bin/mxmlc",
+        "-library-path+=blooddy_crypto.swc",
         //"-o", "${project_base_name}.swf",
-        "${file}", "-o", "../swfupload.swf"
+        "SWFUpload.as", "-o", "../swfupload.swf"
     ],
     "selector": "source.actionscript",
     "encoding": "cp936"

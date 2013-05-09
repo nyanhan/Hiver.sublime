@@ -20,8 +20,7 @@ if s.get("nginx_path"):
     CommandHash["Nginx stop"] = "hiver_stop_nginx"
     pass
 
-CommandList = CommandHash.keys()
-CommandList.sort()
+CommandList = sorted(CommandHash.keys())
 
 
 class ShowHiverListCommand(sublime_plugin.WindowCommand):
@@ -64,7 +63,7 @@ class HiverReloadNginx(sublime_plugin.WindowCommand):
         error = e.stderr.readlines()
 
         if error:
-            sublime.error_message("".join(error))
+            sublime.error_message((b"".join(error).decode("utf-8")))
         else:
             sublime.message_dialog("Nginx reload success.")
             # panel_edit = LOG_PANEL.begin_edit()
@@ -83,7 +82,7 @@ class HiverStartNginx(sublime_plugin.WindowCommand):
         error = e.stderr.readlines()
 
         if error:
-            sublime.error_message("".join(error))
+            sublime.error_message((b"".join(error).decode("utf-8")))
         else:
             sublime.message_dialog("Nginx start success.")
 
@@ -96,7 +95,7 @@ class HiverStopNginx(sublime_plugin.WindowCommand):
         error = e.stderr.readlines()
 
         if error:
-            sublime.error_message("".join(error))
+            sublime.error_message((b"".join(error).decode("utf-8")))
         else:
             sublime.message_dialog("Nginx stop success.")
             
